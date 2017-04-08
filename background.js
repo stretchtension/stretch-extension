@@ -11,7 +11,6 @@ function show() {
   var hour = time[1] % 12 || 12;               // The prettyprinted hour.
   var period = time[1] < 12 ? 'a.m.' : 'p.m.'; // The period of the day.
   new Notification(hour + time[2] + ' ' + period, {
-    icon: '48.png',
     body: 'Time to make the toast.'
   });
 }
