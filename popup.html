@@ -6,7 +6,11 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" />    
+
+    <title>Stretchtension in Action</title>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -20,6 +24,22 @@
         max-width: 400px;
       }
     </style>
+
+    
+    <main>
+        <h2>It's time to take a break!</h2>
+        <p>Pick an activity to do.</p>
+        <form action="/action_page.php" method="get">
+            <input type="checkbox" name="activity" value="water"> Drink a glass of water.<br>
+            <input type="checkbox" name="activity" value="walk"> Walk around the room.<br>
+            <input type="checkbox" name="activity" value="stretch"> Stretch your arms up high.<br>
+
+
+            <input type="submit" value="Submit">
+        </form>
+        
+    </main>
+
 
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security

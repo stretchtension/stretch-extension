@@ -1,16 +1,32 @@
 {
   "manifest_version": 2,
 
-  "name": "Stretch Extension",
-  "description": "Suggestions for wellness every 15 minutes.",
+  "name": "Strextercise",
+  "description": "Reminding you to stay healthy by stretching.",
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "Untitled.png",
+    //design a new icon 
+    "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+
+  "background": {
+    // Recommended
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],    //extension is active on any webpage
+      "css": ["styles.css"],
+      "js": ["content.js"]          //connect to the contents.js 
+    }
+  ],
+
   "permissions": [
     "activeTab",
-    "notifications"
+    "https://ajax.googleapis.com/"
   ]
 }
