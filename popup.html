@@ -25,20 +25,7 @@
       }
     </style>
 
-    
-    <main>
-        <h2>It's time to take a break!</h2>
-        <p>Pick an activity to do.</p>
-        <form action="/action_page.php" method="get">
-            <input type="checkbox" name="activity" value="water"> Drink a glass of water.<br>
-            <input type="checkbox" name="activity" value="walk"> Walk around the room.<br>
-            <input type="checkbox" name="activity" value="stretch"> Stretch your arms up high.<br>
 
-
-            <input type="submit" value="Submit">
-        </form>
-        
-    </main>
 
 
     <!--
@@ -47,11 +34,56 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <script src="popup.js"></script>
+
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+
+
+
+
+  <div id="clockdiv">
+  <h1>Countdown Clock</h1>
+    <!--<div>
+      <span class="days"></span>
+      <div class="smalltext">Days</div>
+    </div>
+    <div>
+      <span class="hours"></span>
+      <div class="smalltext">Hours</div>
+    </div> -->
+    <div>
+      <span class="minutes"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+      <span class="seconds"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
+
+    <button id="resetTime" >Start Work</button>
+  </div>
+  </div>
+    <div id="breakdiv" style="display:none; min-width:300px;">        
+    <h2>It's time to take a break!</h2>
+        <p>Pick an activity to do.</p>
+        <form action="/action_page.php" method="get">
+            <input type="checkbox" name="activity" value="water"> Drink a glass of water.<br>
+            <input type="checkbox" name="activity" value="walk"> Walk around the room.<br>
+            <input type="checkbox" name="activity" value="stretch"> Stretch your arms up high.<br>
+        </form>
+        <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+        <button id="resetSmallTime" >Start Break</button>
+
+    </div>
+   
   </body>
+  <script src="content.js"></script>
 </html>
 
