@@ -19,8 +19,8 @@ function getTimeRemaining(endtime) {
 var timeinterval;
 function initializeClock(id, endtime) {
   var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
+  //var daysSpan = clock.querySelector('.days');
+  //var hoursSpan = clock.querySelector('.hours');
   var minutesSpan = clock.querySelector('.minutes');
   var secondsSpan = clock.querySelector('.seconds');
 
@@ -31,6 +31,7 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
+    console.log("t total: "+ t.total);
     if (t.total <= 0) {
       clearInterval(timeinterval);
       if(isWorking){
@@ -54,13 +55,13 @@ function initializeClock(id, endtime) {
 }
 function setMainClock(){
   var deadline = new Date(Date.parse(new Date()) + 15 * 1000);
-  clearInterval(timeinterval);
+  //clearInterval(timeinterval);
   initializeClock('clockdiv', deadline);
 
 }
 
 function setSmallClock(){
-  clearInterval(timeinterval);
+  //clearInterval(timeinterval);
     var deadline = new Date(Date.parse(new Date()) + 10 * 1000);
   initializeClock('breakdiv', deadline);
 

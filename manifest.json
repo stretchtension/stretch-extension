@@ -14,19 +14,21 @@
   "background": {
     // Recommended
     "persistent": true,
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "background_page":"background.html"
   },
 
   "content_scripts": [
     {
       "matches": ["<all_urls>"],    //extension is active on any webpage
-      "css": ["styles.css"],
+      //"css": ["styles.css"],
       "js": ["content.js"]          //connect to the contents.js 
     }
   ],
 
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "https://ajax.googleapis.com/",
+    "storage"
   ]
 }
